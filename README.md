@@ -1,32 +1,78 @@
-# Turborepo react-native starter
+# Ready-to-Work Monorepo
 
-This is a community-maintained example. If you experience a problem, please submit a pull request with a fix. GitHub Issues will be closed.
+Un boilerplate moderne pour monorepo.
 
-## Using this example
+## 🚀 Technologies
 
-Run the following command:
+- **Package Manager**: [bun](https://bun.sh/) (version 1.2.13)
+- **Build System**: [Turborepo](https://turbo.build/)
+- **Framework Web**: [Vite](https://vitejs.dev/) avec React
+- **Framework Mobile**: [Expo](https://expo.dev/)
+- **Type Checking**: [TypeScript](https://www.typescriptlang.org/)
+- **Linting**: [ESLint](https://eslint.org/)
+- **Formatting**: [Prettier](https://prettier.io/) avec [@trivago/prettier-plugin-sort-imports](https://github.com/trivago/prettier-plugin-sort-imports)
 
-```sh
-npx create-turbo@latest -e with-react-native-web
+## 📦 Structure du Projet
+
+```
+.
+├── apps/
+│   ├── native/          # Application Expo/React Native
+│   └── web/             # Application Vite + React
+├── packages/
+│   ├── core/            # Logique métier partagée
+│   ├── eslint-config/   # Configuration ESLint partagée
+│   ├── localization/    # Internationalisation (en)
+│   ├── typescript-config/ # Configuration TypeScript partagée
+│   └── ui/              # Composants UI partagés
+└── package.json
 ```
 
-## What's inside?
+## 🛠 Installation
 
-This Turborepo includes the following packages/apps:
+1. **Prérequis**
+   - Node.js (version >=18)
+   - Bun (version 1.2.13)
 
-### Apps and Packages
+2. **Installation des dépendances**
+   ```bash
+   bun install
+   ```
 
-- `native`: a [react-native](https://reactnative.dev/) app built with [expo](https://docs.expo.dev/)
-- `web`: a [Next.js](https://nextjs.org/) app built with [react-native-web](https://necolas.github.io/react-native-web/)
-- `@repo/ui`: a stub [react-native](https://reactnative.dev/) component library shared by both `web` and `native` applications
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+## 🚀 Démarrage
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### 📝 Développement Web
+```bash
+bun dev:web
+```
 
-### Utilities
+### 📝 Développement Mobile
+```bash
+bun dev:native
+```
 
-This Turborepo has some additional tools already setup for you:
+## 🏗 Architecture
 
-- [Expo](https://docs.expo.dev/) for native development
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [Prettier](https://prettier.io) for code formatting
+### Packages Partagés
+
+- **@repo/core**: Logique métier partagée
+  - Types communs
+  - Helpers utilitaires
+
+- **@repo/localization**: Internationalisation
+  - Support EN
+  - Types pour l'i18n
+
+- **@repo/ui**: Composants UI partagés
+  - Composants réutilisables
+  - Compatible web et mobile
+
+- **@repo/eslint-config**: Configuration ESLint
+  - Règles pour React Native/Expo
+  - Règles pour Vite
+  - Règles TypeScript
+  - Intégration Prettier
+
+- **@repo/typescript-config**: Configuration TypeScript
+  - Configurations optimisées pour React
+  - Configurations pour Node.js
