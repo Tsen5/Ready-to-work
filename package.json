@@ -9,14 +9,14 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
-    "prettier": "^3.1.1",
+    "prettier": "^3.5.3",
     "turbo": "^2.5.3"
   },
   "engines": {
     "node": ">=18"
   },
   "name": "with-react-native-web",
-  "packageManager": "bun@1.2.5",
+  "packageManager": "bun@1.2.13",
   "workspaces": [
     "apps/*",
     "packages/*"
