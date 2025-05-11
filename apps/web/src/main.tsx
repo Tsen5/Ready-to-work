@@ -1,6 +1,8 @@
-import { createRoot } from "react-dom/client";
-import "./style.css";
-import { Header, Counter } from "@repo/ui";
+import { createRoot } from 'react-dom/client';
+
+import { Counter, Header } from '@repo/ui';
+
+import './style.css';
 
 const App = () => (
   <div>
@@ -11,4 +13,4 @@ const App = () => (
   </div>
 );
 
-createRoot(document.getElementById("app")!).render(<App />);
+createRoot(document.getElementById('app')!).render(<App />);
