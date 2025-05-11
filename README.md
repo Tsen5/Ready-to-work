@@ -11,6 +11,9 @@ Un boilerplate moderne pour monorepo.
 - **Type Checking**: [TypeScript](https://www.typescriptlang.org/)
 - **Linting**: [ESLint](https://eslint.org/)
 - **Formatting**: [Prettier](https://prettier.io/) avec [@trivago/prettier-plugin-sort-imports](https://github.com/trivago/prettier-plugin-sort-imports)
+- **Git Hooks**: [Husky](https://typicode.github.io/husky/)
+- **Commit Linting**: [commitlint](https://commitlint.js.org/)
+- **Staged Files**: [lint-staged](https://github.com/okonet/lint-staged)
 
 ## 📦 Structure du Projet
 
@@ -36,8 +39,14 @@ Un boilerplate moderne pour monorepo.
    - Bun (version 1.2.13)
 
 2. **Installation des dépendances**
+
    ```bash
    bun install
+   ```
+
+3. **Configuration des Git Hooks**
+   ```bash
+   bun prepare
    ```
 
 ## 🚀 Démarrage
@@ -53,6 +62,48 @@ bun dev:web
 ```bash
 bun dev:native
 ```
+
+## 📝 Scripts Disponibles
+
+- `bun build` - Build tous les packages et applications
+- `bun dev` - Lance le développement pour toutes les applications
+- `bun lint` - Lance le linting sur tous les packages
+- `bun format` - Formate le code avec Prettier
+
+## 🔍 Qualité de Code
+
+### Git Hooks avec Husky
+
+- Vérification des commits avant le push
+- Formatage automatique du code
+- Linting des fichiers modifiés
+
+### Commit Linting
+
+Le projet suit les conventions de commit [Conventional Commits](https://www.conventionalcommits.org/). Format attendu :
+
+```
+type(scope): description
+
+[optional body]
+
+[optional footer]
+```
+
+Types de commit supportés :
+
+- `feat`: Nouvelle fonctionnalité
+- `fix`: Correction de bug
+- `docs`: Documentation
+- `style`: Formatage
+- `refactor`: Refactoring
+- `test`: Tests
+- `chore`: Maintenance
+
+### Lint Staged
+
+- ESLint sur les fichiers `.js`, `.jsx`, `.ts`, `.tsx`
+- Prettier sur tous les fichiers supportés
 
 ## 🏗 Architecture
 
