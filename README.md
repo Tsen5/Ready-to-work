@@ -31,6 +31,7 @@ Un boilerplate moderne pour monorepo.
 ## 🛠 Installation
 
 1. **Prérequis**
+
    - Node.js (version >=18)
    - Bun (version 1.2.13)
 
@@ -42,11 +43,13 @@ Un boilerplate moderne pour monorepo.
 ## 🚀 Démarrage
 
 ### 📝 Développement Web
+
 ```bash
 bun dev:web
 ```
 
 ### 📝 Développement Mobile
+
 ```bash
 bun dev:native
 ```
@@ -56,18 +59,22 @@ bun dev:native
 ### Packages Partagés
 
 - **@repo/core**: Logique métier partagée
+
   - Types communs
   - Helpers utilitaires
 
 - **@repo/localization**: Internationalisation
+
   - Support EN
   - Types pour l'i18n
 
 - **@repo/ui**: Composants UI partagés
+
   - Composants réutilisables
   - Compatible web et mobile
 
 - **@repo/eslint-config**: Configuration ESLint
+
   - Règles pour React Native/Expo
   - Règles pour Vite
   - Règles TypeScript
